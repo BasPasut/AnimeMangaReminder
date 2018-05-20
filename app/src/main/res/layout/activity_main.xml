@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/browserView"
+        android:onClick="travel"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/browserView2"
+        android:onClick="travel"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:srcCompat="@drawable/logo2" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Press the image to enter site." />
+
+    <Button
+        android:id="@+id/updateList_btn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="View updates"
+        android:onClick="viewUpdates"
+        android:visibility="invisible"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/theme_btn"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="switchColor"
+        android:text="Change theme"
+        android:textSize="10dp" />
+
+</LinearLayout>
