@@ -7,11 +7,12 @@ import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.mast.animemangareminder.Repository.OnlineAnimeRepo
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() , AnimeView {
 
-    var presenter = AnimePresenter(this)
+    var presenter = AnimePresenter(this, OnlineAnimeRepo())
     var color = false
 
     override fun notifyAnime(text: String) {

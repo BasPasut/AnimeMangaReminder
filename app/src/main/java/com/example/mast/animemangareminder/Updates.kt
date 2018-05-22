@@ -9,12 +9,14 @@ import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_updates.*
 import android.text.method.ScrollingMovementMethod
 import android.view.View
+import com.example.mast.animemangareminder.Repository.AnimeRepo
+import com.example.mast.animemangareminder.Repository.OnlineAnimeRepo
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class Updates : AppCompatActivity() , AnimeView {
 
-    var presenter = AnimePresenter(this)
+    var presenter = AnimePresenter(this, OnlineAnimeRepo())
 
     override fun notifyAnime(text: String) {
         update_text.setText(text)

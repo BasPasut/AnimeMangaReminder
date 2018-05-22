@@ -13,11 +13,10 @@ import java.net.URL
 import java.util.*
 import kotlin.collections.ArrayList
 
-class AnimePresenter (val view : AnimeView) : Observer {
+class AnimePresenter (val view : AnimeView, val repo : AnimeRepo) : Observer {
 
     var animes = ArrayList<Anime>()
     var oldSave = ArrayList<Anime>()
-    var repo = OnlineAnimeRepo()
 
     fun start(){
         repo.addObserver(this)
